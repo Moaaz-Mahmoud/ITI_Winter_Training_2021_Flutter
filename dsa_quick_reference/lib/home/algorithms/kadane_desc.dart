@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-class About extends StatelessWidget{
+class Kadane extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return  Scaffold(body:
     ListTile(
+      trailing: Icon(Icons.construction),
       title: Text(
         "\n\nKadane's Algorithm",
         style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),

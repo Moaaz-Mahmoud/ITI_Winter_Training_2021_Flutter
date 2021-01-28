@@ -1,14 +1,18 @@
+import 'package:dsa_quick_reference/home/algorithms/dijkstra_desc.dart';
+import 'package:dsa_quick_reference/home/algorithms/kadane_desc.dart';
 import 'package:flutter/material.dart';
 import 'other/how_to_use.dart';
 import 'data_structures/linked_list_desc.dart';
 import 'data_structures/stack_desc.dart';
 import 'data_structures/binary_search_tree_desc.dart';
 import 'other/about.dart';
+import 'algorithms/dfs_desc.dart';
 
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        title: "DSA Quick Reference",
         home: DefaultTabController(
             length: 3,
             child: Scaffold(
@@ -42,6 +46,7 @@ class MainPage extends StatelessWidget {
                   ],),
                 ),
                 appBar: AppBar(
+                  title: Text("DSA Quick Reference"),
                     actions: <Widget>[
                       IconButton(
                         icon: Icon(
@@ -137,6 +142,13 @@ class MainPage extends StatelessWidget {
                               style: TextStyle(fontWeight: FontWeight.bold)
                           ),
                           subtitle: Text("Iterative dp algorithm"),
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (BuildContext context)=> Kadane(),
+                                ),
+                              );
+                            }
                         ),
                         ListTile(
                           title: Text(
@@ -144,6 +156,13 @@ class MainPage extends StatelessWidget {
                               style: TextStyle(fontWeight: FontWeight.bold)
                           ),
                           subtitle: Text("Graph traversal algorithm"),
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (BuildContext context)=> DFS(),
+                                ),
+                              );
+                            }
                         ),
                         ListTile(
                           title: Text(
@@ -151,6 +170,13 @@ class MainPage extends StatelessWidget {
                               style: TextStyle(fontWeight: FontWeight.bold)
                           ),
                           subtitle: Text("Shortest-path finding algorithm"),
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (BuildContext context)=> Dijkstra(),
+                                ),
+                              );
+                            }
                         ),
                       ],)
                     ],
