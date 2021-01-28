@@ -95,6 +95,11 @@ class MainPage extends StatelessWidget {
                                                       color: Colors.black,
                                                       fontWeight: FontWeight.bold)),
                           ),
+                          Center(
+                            child: Text('\nSwipe left to get started.',
+                              style: TextStyle(fontSize: 16)
+                            ),
+                          )
                         ],
                       ),
                       ListView(children: [
