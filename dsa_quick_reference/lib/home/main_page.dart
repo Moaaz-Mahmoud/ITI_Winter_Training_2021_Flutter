@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../other/how_to_use.dart';
-import '../data_structures/linked_list_desc.dart';
-import '../data_structures/stack_desc.dart';
-import '../data_structures/binary_search_tree_desc.dart';
-import '../other/about.dart';
+import 'other/how_to_use.dart';
+import 'data_structures/linked_list_desc.dart';
+import 'data_structures/stack_desc.dart';
+import 'data_structures/binary_search_tree_desc.dart';
+import 'other/about.dart';
 
 class MainPage extends StatelessWidget {
   @override
@@ -13,7 +13,6 @@ class MainPage extends StatelessWidget {
             length: 3,
             child: Scaffold(
                 drawer: Drawer(
-
                   child: ListView(children: [
                     /*UserAccountsDrawerHeader(
                       accountName: Text("Meow Meow"),
