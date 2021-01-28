@@ -13,6 +13,9 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: "DSA Quick Reference",
+        theme: ThemeData(
+          //=================================================//
+        ),
         home: DefaultTabController(
             length: 3,
             child: Scaffold(
@@ -77,17 +80,20 @@ class MainPage extends StatelessWidget {
                       image:
                         AssetImage("assets/images/background.png"),
                         fit: BoxFit.cover,
+                        colorFilter: ColorFilter.mode(
+                            Colors.white.withOpacity(0.4),
+                            BlendMode.softLight
+                        )
                     )),
                   child: TabBarView(
                     children: [
                       ListView(
                         children: [
-                          /*
-                      new Image.asset("D:/FlutterApps/ITI_Winter_Training_2021_Flutter"+
-                      "/dsa_quick_reference/assets/images/home_bg.jpg")*/
                           Center(
                             child: Text('\nWelcome to DSA Quick Reference!',
-                                        style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold), ),
+                                     style: TextStyle(fontSize: 20,
+                                                      color: Colors.black,
+                                                      fontWeight: FontWeight.bold)),
                           ),
                         ],
                       ),
